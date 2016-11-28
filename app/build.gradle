@@ -36,7 +36,7 @@ android {
     }
 
     def STRING = "String"
-    def UNDEFINED = '"UNDEFINED"'
+    def UNDEFINED = '"70bb6a78591fd4e2fc744e679d0fbeed"'
     def THE_MOVIE_DB_API_KEY = "THE_MOVIE_DB_API_KEY"
 
     buildTypes {
@@ -58,7 +58,7 @@ android {
     }
     buildTypes.each {
         if (!isOnCi()) {
-            it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, MY_MOVIE_DB_API_KEY
+            it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, '"70bb6a78591fd4e2fc744e679d0fbeed"'
         } else {
             it.buildConfigField STRING, THE_MOVIE_DB_API_KEY, UNDEFINED
         }
